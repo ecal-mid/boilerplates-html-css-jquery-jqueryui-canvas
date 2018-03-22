@@ -9,6 +9,12 @@ body {
   transform: translate(-50%, -50%);
   background-color: #aaa;
 }
+#custom-handle {
+  width: 3em;
+  height: 1.6em;
+  text-align: center;
+  line-height: 1.6em;
+}
 @media screen and (orientation: portrait) and (max-width: 1024px) {
 
 }

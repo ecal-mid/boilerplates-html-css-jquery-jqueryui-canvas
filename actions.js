@@ -5,8 +5,20 @@ var h = 700;
 var r = 0;
 var g = 10;
 var prtcles = [];
+var qtt = 0;
 //
 $(document).ready(function() {
+  //
+  var handle = $("#custom-handle");
+  $("#slider").slider({
+    create : function() { handle.text($(this).slider("value")); },
+    slide : function(event, ui) {
+      handle.text(ui.value);
+      qtt = ui.value;
+      //console.log(ui.value);
+    }
+  });
+  //
   Setup();
 });
 //
@@ -18,8 +30,9 @@ function Setup() {
   //
   ctx = canvas.getContext("2d");
   //
-  window.requestAnimationFrame(Draw2)
+  window.requestAnimationFrame(Draw4)
 }
+
 
 
 function Draw() {
@@ -138,7 +151,9 @@ function Draw4() {
   //
   ctx.save();
   ctx.clearRect(0, 0, w, h);
+if(Math.random()*100<qtt) {
   prtcles.push(new Prtcle());
+}
   for(var i=0; i<prtcles.length; i++) {
     prtcles[i].move();
     prtcles[i].draw();
@@ -147,3 +162,30 @@ function Draw4() {
 
   window.requestAnimationFrame(Draw4)
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//gsdfdgfh
