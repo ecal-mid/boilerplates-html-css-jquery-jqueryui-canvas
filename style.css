@@ -1,13 +1,13 @@
 body {
 }
-#cover {
+#canvas {
   position: absolute;
-  width: 600px;
-  height: 600px;
+  width: 700px;
+  height: 700px;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-  background-color: red;
+  background-color: #aaa;
 }
 @media screen and (orientation: portrait) and (max-width: 1024px) {
 
